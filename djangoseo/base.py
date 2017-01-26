@@ -83,7 +83,7 @@ class FormattedMetadata(object):
             elif isinstance(populate_from, Literal):
                 return populate_from.value
             elif populate_from is not NotSet:
-                return self._resolve_value(populate_from)
+                return self._resolve_value(populate_from.name)
 
     def __getattr__(self, name):
         # If caching is enabled, work out a key
